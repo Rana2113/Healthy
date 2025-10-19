@@ -76,7 +76,7 @@ file_header:
 custom_rules:
   no_lines_around_braces:
     name: "No lines before or after closing curly braces"
-    regex: "(\\s*{[^\\n]*)\\s*\\n{2,}(\\s*\\n)*\\s*([^\\n]*\\n\\s*})"
+    regex: "\\s*\\{\\s*\\n{2,}"
     message: "Don't leave lines before or after closing curly braces"
-    severity: warning # or error
-    correction: "$1\n$4"
+    severity: warning
+   
