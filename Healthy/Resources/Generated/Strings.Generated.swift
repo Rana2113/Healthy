@@ -17,6 +17,10 @@ internal enum L10n {
     internal static let startCooking = L10n.tr("Localizable", "splash.startCooking", fallback: "Start Cooking")
     /// Get Cooking
     internal static let subtitle = L10n.tr("Localizable", "splash.subtitle", fallback: "Get Cooking")
+    /// test1
+    internal static let test1 = L10n.tr("Localizable", "splash.test1", fallback: "test1")
+    /// test2
+    internal static let test2 = L10n.tr("Localizable", "splash.test2", fallback: "test2")
     /// 100K+ Premium Recipe
     internal static let title = L10n.tr("Localizable", "splash.title", fallback: "100K+ Premium Recipe")
   }
