@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .systemBackground
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = viewController
+        window.rootViewController = SplashViewController(nibName: "SplashViewController", bundle: nil)
         window.makeKeyAndVisible()
         self.window = window
     }
