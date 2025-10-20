@@ -262,16 +262,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/swiftgen.yml",
-				"$(SRCROOT)/Resources/Colors.xcassets",
-				"$(SRCROOT)/Resources/Localizable.strings\n",
 			);
 			name = SwiftGen;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Healthy/Resources/Generated/UIColors.Generated.swift\n",
-				"$(DERIVED_FILE_DIR)/Healthy/Resources/Generated/Strings.Generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
