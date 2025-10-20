@@ -27,7 +27,7 @@ extension UIButton {
 private extension UIButton.ButtonStyle {
     var backgroundColor : UIColor {
         switch self {
-            case .primary: return .black
+        case .primary: return .primary100
             case .secondary: return .white
         }
     }
@@ -36,7 +36,7 @@ private extension UIButton.ButtonStyle {
     var textColor: UIColor? {
         switch self {
         case .primary: return .white
-        case .secondary: return .black
+        case .secondary: return .secondary100
         }
     }
 
