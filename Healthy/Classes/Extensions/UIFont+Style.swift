@@ -23,7 +23,7 @@ extension UIFont {
     }
 }
 
-// MARK: - Regular Fonts
+// MARK: - Bold Fonts
 
 extension UIFont {
     static var titleBold: UIFont {
