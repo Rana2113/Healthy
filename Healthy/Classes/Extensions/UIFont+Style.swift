@@ -24,6 +24,7 @@ extension UIFont {
 }
 
 // MARK: - Bold Fonts
+
 extension UIFont {
     static var titleBold: UIFont {
         poppins(ofSize: 50, weight: .bold)
