@@ -1,6 +1,9 @@
 .DS_Store
+<<<<<<< HEAD
 # Xcode user data (do not track)
 *.xcuserstate
 *.xccheckout
 *.xcscmblueprint
 *.xcuserdatad/
+=======
+>>>>>>> 5140b16 (chore: ignore .DS_Store)
