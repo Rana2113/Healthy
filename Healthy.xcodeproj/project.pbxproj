@@ -219,6 +219,9 @@
 			);
 			mainGroup = 71DFD2382EA0160D00F1B53A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DFD2422EA0160D00F1B53A /* Products */;
 			projectDirPath = "";
@@ -621,6 +624,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 71DFD2392EA0160D00F1B53A /* Project object */;
 }
