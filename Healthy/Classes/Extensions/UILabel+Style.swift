@@ -44,7 +44,7 @@ private struct TitleBoldStyle: LabelStyling {
     var inverted: Bool = false
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black100
-        label.font = .titleBoldStyle
+        label.font = .titleBold
         label.numberOfLines = .zero
     }
 }
@@ -53,7 +53,7 @@ private struct SubtitleLabelStyle: LabelStyling {
     var inverted: Bool = false
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black20
-        label.font = .systemFontSize
+        label.font = .mediumRegular
         label.numberOfLines = .zero
     }
 }
@@ -61,7 +61,7 @@ private struct SubtitleLabelStyle: LabelStyling {
 private struct HeaderBoldLabelStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
         label.textColor = .black100
-        label.font = .HeaderBoldLabelStyle
+        label.font = .headerBold
         label.numberOfLines = .zero
     }
 }
@@ -70,7 +70,7 @@ private struct InvertedBodyStyle: LabelStyling {
     var inverted: Bool = false
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black80
-        label.font = .defaultFontSize
+        label.font = .normalRegular
         label.numberOfLines = .zero
     }
 }
@@ -80,7 +80,7 @@ private struct CaptionLabelStyle: LabelStyling {
 
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black20
-        label.font = .smallSystemFontSize
+        label.font = .smallRegular
         label.numberOfLines = .zero
     }
 }
