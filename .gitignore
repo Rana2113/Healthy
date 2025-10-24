@@ -1,1 +1,7 @@
 .DS_Store
+# Xcode user data (do not track)
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcuserdatad/
+
