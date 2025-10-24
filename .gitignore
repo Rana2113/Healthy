@@ -1,7 +1,13 @@
 .DS_Store
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # Xcode user data (do not track)
 *.xcuserstate
 *.xccheckout
 *.xcscmblueprint
 *.xcuserdatad/
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
