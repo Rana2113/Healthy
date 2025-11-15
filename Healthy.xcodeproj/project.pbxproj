@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22B51D962EA945ED00E20C93 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 22B51D952EA945ED00E20C93 /* swiftgen.yml */; };
 		71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B51D952EA945ED00E20C93 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		71DFD2412EA0160D00F1B53A /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DFD2572EA0161000F1B53A /* HealthyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,22 +47,11 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		714984CC2EA6AFEF001461F8 /* Exceptions for "Healthy" folder in "Copy Bundle Resources" phase from "Healthy" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 71DFD23F2EA0160D00F1B53A /* Resources */;
-			membershipExceptions = (
-				"Classes/Extensions/UILabel+Style.swift",
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		71DFD2432EA0160D00F1B53A /* Healthy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				71FAC9132EA167CA003C1789 /* Exceptions for "Healthy" folder in "Healthy" target */,
-				714984CC2EA6AFEF001461F8 /* Exceptions for "Healthy" folder in "Copy Bundle Resources" phase from "Healthy" target */,
 			);
 			path = Healthy;
 			sourceTree = "<group>";
@@ -100,6 +91,7 @@
 		71DFD2382EA0160D00F1B53A = {
 			isa = PBXGroup;
 			children = (
+				22B51D952EA945ED00E20C93 /* swiftgen.yml */,
 				71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */,
 				71DFD2432EA0160D00F1B53A /* Healthy */,
 				71DFD25A2EA0161000F1B53A /* HealthyTests */,
@@ -220,6 +212,7 @@
 			mainGroup = 71DFD2382EA0160D00F1B53A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DFD2422EA0160D00F1B53A /* Products */;
@@ -238,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B51D962EA945ED00E20C93 /* swiftgen.yml in Resources */,
 				71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +266,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(SRCROOT)/Resources/Generated/Colors.Generated.swift\n$(SRCROOT)/Resources/Generated/Assets.Generated.swift\n$(SRCROOT)/Resources/Generated/Strings.Generated.swift\n",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,6 +274,7 @@
 		};
 		71DBB79A2EA570C4004BA0F0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -341,7 +337,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4V2NP2LKD5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
@@ -370,7 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4V2NP2LKD5;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
@@ -625,6 +621,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 71DFD2392EA0160D00F1B53A /* Project object */;
 }
