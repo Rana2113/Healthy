@@ -1,10 +1,11 @@
 import UIKit
-
+import NewRelic
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        NewRelic.start(withApplicationToken:"eu01xxb5397a0944b84d224189f7bf342d03a01416-NRMA")
         return true
     }
 

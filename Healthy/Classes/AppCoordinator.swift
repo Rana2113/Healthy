@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import NewRelic
 
 final class AppCoordinator {
     
@@ -26,8 +27,8 @@ final class AppCoordinator {
 private extension AppCoordinator {
     
     func displayOnBoradingFlow(){
-        var navigationController = UINavigationController()
-        var coordinator =
+        let navigationController = UINavigationController()
+        let coordinator =
         DefaultOnboardingCoordinator(
             navigation: navigationController,
             onAuthentication: { [weak self] in
