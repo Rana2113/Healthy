@@ -14,7 +14,10 @@ final class Logger {
             // Unit-test
             return []
         }
-        return []
+        return [
+            FileSystemLogger(),
+            NewRelicLogger()
+        ]
     }()
     
     
