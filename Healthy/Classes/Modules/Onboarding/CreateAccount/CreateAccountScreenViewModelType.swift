@@ -1,7 +1,0 @@
-import Foundation
-
-typealias CreateAccountScreenViewModelType = CreateAccountScreenViewModelInput & CreateAccountScreenViewModelOutput
-
-protocol CreateAccountScreenViewModelInput {}
-
-protocol CreateAccountScreenViewModelOutput {}

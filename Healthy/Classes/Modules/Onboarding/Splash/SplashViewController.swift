@@ -41,6 +41,5 @@ extension SplashViewController {
 private extension SplashViewController {
     func configureAppearance() {
         startCookingButton.applyButtonStyle(.primary)
-        
     }
 }
