@@ -49,7 +49,6 @@ struct CharacterCountValidationRule: ValidationRule {
     let maxCount: Int?
 
     func validate(_ value: ValueType) throws {
-
         if !((value.count >= minCount ?? Int.min) && (value.count <= maxCount ?? Int.max)) {
             var errorMsg = ""
             if let minimum = minCount, let maximum = maxCount {

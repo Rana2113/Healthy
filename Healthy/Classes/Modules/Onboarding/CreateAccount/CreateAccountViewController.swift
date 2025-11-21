@@ -8,7 +8,7 @@ final class CreateAccountViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var checkBoxButton: CheckboxButton!
     @IBOutlet weak var signUpButton: UIButton!
-    
+
     // MARK: - Properties
 
     private let viewModel: CreateAccountViewModelType
@@ -29,7 +29,7 @@ final class CreateAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureTextField()
         configureSignUpButton()
         configureAcceptTermsAndConditions()
@@ -42,7 +42,7 @@ final class CreateAccountViewController: UIViewController {
 private extension CreateAccountViewController {
     @objc func textDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }
-    
+
         switch sender {
         case nameTextField:
             viewModel.updateUsername(text)
@@ -54,7 +54,6 @@ private extension CreateAccountViewController {
             viewModel.updateConfirmPassword(text)
         default:
             assertionFailure("Unexpected text field: \(sender)")
-           
         }
     }
     @objc private func didTapSignUp(_ sender: Any) {
@@ -70,11 +69,11 @@ private extension CreateAccountViewController {
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         confirmPasswordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
-    
-    func configureAcceptTermsAndConditions(){
+
+    func configureAcceptTermsAndConditions() {
         viewModel.updateAcceptTermsAndConditions(checkBoxButton.isChecked)
     }
-    
+
     func configureSignUpButton() {
         signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
     }

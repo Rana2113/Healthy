@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let startVC = CreateAccountViewController(viewModel: viewModel)
         self.window?.rootViewController = startVC
         self.window?.makeKeyAndVisible()
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

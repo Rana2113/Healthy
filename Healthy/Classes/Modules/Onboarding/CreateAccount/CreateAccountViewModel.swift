@@ -8,7 +8,7 @@ final class CreateAccountViewModel {
     private var password: String = ""
     private var confirmPassword: String = ""
     private var isChecked: Bool = false
-    private var onButtonEnable: (Bool) -> Void = { _ in }
+    private var onButtonEnabled: (Bool) -> Void = { _ in }
  }
 
 // MARK: - Input
@@ -40,7 +40,7 @@ extension CreateAccountViewModel: CreateAccountViewModelInput {
 
 extension CreateAccountViewModel: CreateAccountViewModelOutput {
     func configureButtonEnabled(onEnable: @escaping (Bool) -> Void) {
-        onButtonEnable = onEnable
+        onButtonEnabled = onEnable
         updateEnableStateButton()
     }
 }
@@ -49,7 +49,14 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 
 private extension CreateAccountViewModel {
     func updateEnableStateButton() {
-        let isUserNameValid = !username.isEmpty
-        // TODO: Validation
+        let isUsernameValid = !username.isEmpty
+        let isEmailValid = !email.isEmpty
+        let isPasswordValid = !password.isEmpty && PasswordValidator().hasValidValue(password)
+        let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
+
+        let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
+            && isConfirmPasswordValid
+            && isChecked
+        onButtonEnabled(isButtonEnabled)
     }
 }
