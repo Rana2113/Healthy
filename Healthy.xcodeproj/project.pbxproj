@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22B51D962EA945ED00E20C93 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 22B51D952EA945ED00E20C93 /* swiftgen.yml */; };
 		63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 63831BA92ECCE19F003953DF /* NewRelic */; };
+		63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E032ECF5ACF0032062D /* GoogleSignIn */; };
+		63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E052ECF5ACF0032062D /* GoogleSignInSwift */; };
 		71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */,
 				63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */,
+				63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,8 @@
 			name = Healthy;
 			packageProductDependencies = (
 				63831BA92ECCE19F003953DF /* NewRelic */,
+				63890E032ECF5ACF0032062D /* GoogleSignIn */,
+				63890E052ECF5ACF0032062D /* GoogleSignInSwift */,
 			);
 			productName = Healthy;
 			productReference = 71DFD2412EA0160D00F1B53A /* Healthy.app */;
@@ -218,6 +224,7 @@
 			packageReferences = (
 				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
 				63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
+				63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DFD2422EA0160D00F1B53A /* Products */;
@@ -662,6 +669,14 @@
 				minimumVersion = 7.6.0;
 			};
 		};
+		63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +684,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
 			productName = NewRelic;
+		};
+		63890E032ECF5ACF0032062D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		63890E052ECF5ACF0032062D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
