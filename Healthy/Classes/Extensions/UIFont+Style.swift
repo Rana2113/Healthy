@@ -41,6 +41,9 @@ extension UIFont {
     static var normalBold: UIFont {
         poppins(ofSize: 16, weight: .bold)
     }
+    static var smallBold: UIFont {
+        poppins(ofSize: 14, weight: .bold)
+    }
     static var smallerBold: UIFont {
         poppins(ofSize: 12, weight: .bold)
     }
