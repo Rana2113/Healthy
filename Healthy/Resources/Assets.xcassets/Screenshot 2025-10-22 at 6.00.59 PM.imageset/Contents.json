@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "icon_checkbox_not_selected.png",
+      "filename" : "Screenshot 2025-10-22 at 6.00.59 PM.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

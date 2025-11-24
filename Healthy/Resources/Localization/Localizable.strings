@@ -2,6 +2,3 @@
 "splash.subtitle" = "Get Cooking";
 "splash.description" = "Simple way to find Tasty Recipe";
 "splash.startCooking" = "Start Cooking";
-// MARK: Common Localizations
-"common.email" = "Email";
-"common.password" = "Password";
