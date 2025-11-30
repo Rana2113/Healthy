@@ -1,4 +1,5 @@
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
