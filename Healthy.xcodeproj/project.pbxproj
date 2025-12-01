@@ -40,7 +40,6 @@
 		71FAC9132EA167CA003C1789 /* Exceptions for "Healthy" folder in "Healthy" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Classes/Extensions/UILabel+Style.swift",
 				Resources/Info.plist,
 			);
 			target = 71DFD2402EA0160D00F1B53A /* Healthy */;
