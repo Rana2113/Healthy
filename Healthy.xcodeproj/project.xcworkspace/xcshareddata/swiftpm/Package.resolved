@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "originHash" : "3c486f5cd4d813212e112f94c786bbd05c1115250405bc2e53c2c6ede7267808",
+=======
+  "originHash" : "c909b81d2090c212bd47a8004299d98e3898680199019fb2a8f1645c755e3cac",
+>>>>>>> Stashed changes
   "pins" : [
     {
       "identity" : "app-check",
