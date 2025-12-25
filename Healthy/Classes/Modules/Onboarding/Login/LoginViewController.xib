@@ -121,7 +121,7 @@
                                                 <constraint firstAttribute="width" secondItem="rdB-B1-xRZ" secondAttribute="height" multiplier="1:1" id="s8y-Fb-7Mz"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="G"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="icon-facebook"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLg-UM-qT8" userLabel="Facebook Button">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
@@ -130,7 +130,7 @@
                                                 <constraint firstAttribute="width" secondItem="sLg-UM-qT8" secondAttribute="height" multiplier="1:1" id="R0e-Rf-CK6"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="F"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="icon-google"/>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -201,6 +201,8 @@
         </view>
     </objects>
     <resources>
+        <image name="icon-facebook" width="36" height="36"/>
+        <image name="icon-google" width="36" height="36"/>
         <namedColor name="gray 4">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
