@@ -172,7 +172,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="contentView" destination="n2o-if-aJb" id="Tja-cY-mRl"/>
+                <outlet property="facebookButton" destination="vNT-ee-UAJ" id="skO-BG-ryl"/>
+                <outlet property="googleButton" destination="HyB-hF-wkR" id="dag-uJ-A6S"/>
                 <outlet property="signinButton" destination="g6D-wN-rrl" id="qEL-Dh-6mm"/>
+                <outletCollection property="mediaBackgroundViews" destination="bwH-8l-DCr" collectionClass="NSMutableArray" id="yxz-NC-E71"/>
+                <outletCollection property="mediaBackgroundViews" destination="QHB-oA-i3k" collectionClass="NSMutableArray" id="44B-A9-txU"/>
             </connections>
             <point key="canvasLocation" x="-53.435114503816791" y="137.32394366197184"/>
         </view>
