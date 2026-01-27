@@ -17,5 +17,4 @@ extension SplashViewModel: SplashViewModelInput {
 }
 // MARK: Ouput
 
-extension SplashViewModel: SplashViewModelOutput {
-}
+extension SplashViewModel: SplashViewModelOutput {}

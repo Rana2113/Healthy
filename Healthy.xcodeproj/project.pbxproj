@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		22B51D962EA945ED00E20C93 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 22B51D952EA945ED00E20C93 /* swiftgen.yml */; };
+		63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 63831BA92ECCE19F003953DF /* NewRelic */; };
+		63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E032ECF5ACF0032062D /* GoogleSignIn */; };
+		63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E052ECF5ACF0032062D /* GoogleSignInSwift */; };
 		71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,6 @@
 		71FAC9132EA167CA003C1789 /* Exceptions for "Healthy" folder in "Healthy" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Classes/Extensions/UILabel+Style.swift",
 				Resources/Info.plist,
 			);
 			target = 71DFD2402EA0160D00F1B53A /* Healthy */;
@@ -79,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */,
+				63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */,
+				63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +137,7 @@
 				71DFD23F2EA0160D00F1B53A /* Resources */,
 				63EA12372EA6C57A00DBB6C6 /* SwiftGen */,
 				71DBB79A2EA570C4004BA0F0 /* ShellScript */,
+				63831BB02ECCE19F003953DF /* NewRelic */,
 			);
 			buildRules = (
 			);
@@ -142,6 +148,9 @@
 			);
 			name = Healthy;
 			packageProductDependencies = (
+				63831BA92ECCE19F003953DF /* NewRelic */,
+				63890E032ECF5ACF0032062D /* GoogleSignIn */,
+				63890E052ECF5ACF0032062D /* GoogleSignInSwift */,
 			);
 			productName = Healthy;
 			productReference = 71DFD2412EA0160D00F1B53A /* Healthy.app */;
@@ -224,6 +233,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
+				63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
+				63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DFD2422EA0160D00F1B53A /* Products */;
@@ -264,6 +275,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		63831BB02ECCE19F003953DF /* NewRelic */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = NewRelic;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ${CONFIGURATION} = \"Debug\" ]; then\n  echo \"Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}\"\n  exit 0\nfi\nARTIFACT_DIR=\"${BUILD_DIR%Build/*}\"\nSCRIPT=`/usr/bin/find \"${SRCROOT}\" \"${ARTIFACT_DIR}\" -type f -name run-symbol-tool | head -n 1`\n/bin/sh \"${SCRIPT}\" \"eu01xxb5397a0944b84d224189f7bf342d03a01416-NRMA\"\n";
+		};
 		63EA12372EA6C57A00DBB6C6 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -357,7 +386,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +415,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,7 +672,41 @@
 				minimumVersion = 2.5.3;
 			};
 		};
+		63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.0;
+			};
+		};
+		63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63831BA92ECCE19F003953DF /* NewRelic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
+			productName = NewRelic;
+		};
+		63890E032ECF5ACF0032062D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		63890E052ECF5ACF0032062D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71DFD2392EA0160D00F1B53A /* Project object */;
 }
