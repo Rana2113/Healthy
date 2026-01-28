@@ -1,8 +1,9 @@
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    private var appCoordinator : AppCoordinator?
+    private var appCoordinator: AppCoordinator?
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
@@ -16,10 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
+
         let appCoordinator = AppCoordinator(window: window)
         self.appCoordinator = appCoordinator
-        
+
         appCoordinator.start()
     }
 

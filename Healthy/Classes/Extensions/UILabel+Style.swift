@@ -45,6 +45,7 @@ private struct TitleBoldStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black100
         label.font = .titleBold
+        label.font = .titleBoldStyle
         label.numberOfLines = .zero
     }
 }

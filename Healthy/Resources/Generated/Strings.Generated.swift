@@ -10,6 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum Common {
+    /// Email
+    internal static let email = L10n.tr("Localizable", "common.email", fallback: "Email")
+    /// Password
+    internal static let password = L10n.tr("Localizable", "common.password", fallback: "Password")
+  }
   internal enum Splash {
     /// Simple way to find Tasty Recipe
     internal static let description = L10n.tr("Localizable", "splash.description", fallback: "Simple way to find Tasty Recipe")
