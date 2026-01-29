@@ -1,12 +1,22 @@
 import UIKit
-
+import Combine
 final class LoginViewController: UIViewController {
 
     // MARK: - Outlets
-
+    @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
+    @IBOutlet private(set) weak var emailTextField: UITextField!
+    @IBOutlet private(set) weak var passwordTextFieldlabel: UILabel!
+    @IBOutlet private(set) weak var passwordTextField: UITextField!
+    @IBOutlet private(set) weak var forgetPasswordButton: UIButton!
+    @IBOutlet private(set) weak var signInButton: UIButton!
+    @IBOutlet private(set) weak var signInWithGoogle: GIDSignInButton!
+    @IBOutlet private(set) weak var signInWithFacebook: UIButton!
+    @IBOutlet private(set) weak var signUpWithButton: UIButton!
+    
     // MARK: - Properties
 
     private let viewModel: LoginViewModelType
+    private var subscriptions: Set<AnyCancellable> = []
 
     // MARK: - Init
 
@@ -25,20 +35,98 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViewModel()
+        configureViewModelInputs()
+        configureViewModelOutputs()
+        
     }
 }
-
 // MARK: - Actions
 
-private extension LoginViewController {}
+
+// MARK: - TextField Changes
+
+private extension LoginViewController {
+    func bindTextFieldsChanges() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    @objc func textDidChange(_ sender: UITextField) {
+        guard let text = sender.text else { return }
+        if sender == emailTextField {
+            viewModel.updateEmail(text)
+        }else if sender == passwordTextField {
+            viewModel.updatePassword(text)
+        }
+    }
+}
 
 // MARK: - Configuration
 
 private extension LoginViewController {
-    func configureViewModel() {}
+    func configureViewModelInputs() {
+        bindTextFieldsChanges()
+    }
+    
+    
+    func configureViewModelOutputs() {
+        bindLoadingIndicator()
+        bindErrorMessage()
+        bindButtonState()
+        bindLoginstatus()
+    }
+    
+    
+    func bindLoadingIndicator() {
+        viewModel.onLoadingIndicator { _ in
+            
+        }
+        viewModel.isLoginStatusPublisher.sink { [weak self] isLoggedIn in
+            guard let _ = self else { return }
+            
+        }
+        .store(in: &subscriptions)
+    }
+    
+    
+    func bindErrorMessage() {
+        viewModel.onErrorMessage { [weak self] message in
+            
+        }
+        viewModel.isShowingErrorMessagePublisher.sink { [weak self] message in
+            guard let _ = self else { return }
+            
+            
+            
+        }
+        .store(in: &subscriptions)
+    }
+    
+    
+    func bindButtonState() {
+        viewModel.onButtonEnabled { [weak self] isEnabled in
+            guard let self else {return}
+            self.signInButton.isEnabled = isEnabled
+            
+        }
+        viewModel.isLoginEnabledPublisher.assign(to: \.isEnabled , on: signInButton)
+            .store(in: &subscriptions)
+    }
+    
+    
+    func bindLoginstatus() {
+        viewModel.isLoginStatusPublisher .sink { [weak self] status in
+            guard let _ = self else { return }
+            
+        }
+        .store(in: &subscriptions)
+    }
+    
+    
+
 }
 
 // MARK: - Private Handlers
 
-private extension LoginViewController {}
+private extension LoginViewController {
+    
+}

@@ -1,16 +1,56 @@
 import Foundation
+import Combine
+import Factory
 
 // MARK: - LoginViewModel
 
-final class LoginViewModel {}
+final class LoginViewModel {
+    private var subscriptions = set<AnyCancellable>()
+    @Published private var email: String = ""
+    @Published private var password: String = ""
+    @Published private var isLoadingState: Bool = false
+    @Published private var isShowingErrorMessage: String = ""
+    @Published private var isLoginEnabeld: Bool = false
+    @Published private var isLoginStatus: Bool = false
+}
 
 // MARK: - Input
 
-extension LoginViewModel: LoginViewModelInput {}
+extension LoginViewModel: LoginViewModelInput {
+    func updateEmail(_ text: String) {
+        email = text
+    }
+    
+    func updatePassword(_ text: String) {
+        password = text
+    }
+    
+    func performSignIn() {}
+    
+    func performSignUp() {}
+    
+    func performForgetPassword() {}
+    
+    func performSocialMediaSignIn(_ authentication: any Authentication) {}
+}
 
 // MARK: - Output
 
-extension LoginViewModel: LoginViewModelOutput {}
+extension LoginViewModel: LoginViewModelOutput {
+    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
+        $isLoginStatus.eraseToAnyPublisher()
+    }
+    
+    var isShowingErrorMessagePublisher: AnyPublisher<String, Never> {
+        $isShowingErrorMessage.eraseToAnyPublisher()
+    }
+    var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
+        $isLoginEnabeld.eraseToAnyPublisher()
+    }
+     var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
+        $isLoginStatus.eraseToAnyPublisher()
+    }
+}
 
 // MARK: - Private Handlers
 
