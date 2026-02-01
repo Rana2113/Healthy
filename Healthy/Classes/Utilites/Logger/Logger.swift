@@ -1,8 +1,7 @@
 import Foundation
 
 final class Logger {
-    
-    private static let loggers : [Logging] = {
+    private static let loggers: [Logging] = {
         if NSClassFromString("XCTest") != nil {
             // Unit-test
             return []
@@ -12,8 +11,7 @@ final class Logger {
             NewRelicLogger()
         ]
     }()
-    
-    
+
     static func logDebug(_ message: String,
                          file: StaticString = #fileID,
                          function: StaticString = #function,
@@ -79,9 +77,3 @@ final class Logger {
         }
     }
 }
-
-
-
-
-
-

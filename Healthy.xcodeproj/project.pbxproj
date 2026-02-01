@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22B51D962EA945ED00E20C93 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 22B51D952EA945ED00E20C93 /* swiftgen.yml */; };
+		638F7E502F2FD70300A29C68 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 638F7E4F2F2FD70300A29C68 /* NewRelic */; };
 		71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638F7E502F2FD70300A29C68 /* NewRelic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +144,7 @@
 			);
 			name = Healthy;
 			packageProductDependencies = (
+				638F7E4F2F2FD70300A29C68 /* NewRelic */,
 			);
 			productName = Healthy;
 			productReference = 71DFD2412EA0160D00F1B53A /* Healthy.app */;
@@ -224,6 +227,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
+				638F7E4E2F2FD70300A29C68 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71DFD2422EA0160D00F1B53A /* Products */;
@@ -643,7 +647,23 @@
 				minimumVersion = 2.5.3;
 			};
 		};
+		638F7E4E2F2FD70300A29C68 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		638F7E4F2F2FD70300A29C68 /* NewRelic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 638F7E4E2F2FD70300A29C68 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
+			productName = NewRelic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71DFD2392EA0160D00F1B53A /* Project object */;
 }

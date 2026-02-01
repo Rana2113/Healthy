@@ -4,9 +4,8 @@ import NewRelic
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         configureNewRelic()
-        
+
         return true
     }
 
@@ -28,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// MARK: -Configurations
+// MARK: - Configurations
 
 extension AppDelegate {
-    func configureNewRelic(){
+    func configureNewRelic() {
         NewRelic.start(withApplicationToken: Constants.newRelicAPIKey)
     }
 }
