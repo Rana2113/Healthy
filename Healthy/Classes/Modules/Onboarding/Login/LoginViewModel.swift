@@ -1,11 +1,10 @@
 import Foundation
 import Combine
-import Factory
 
 // MARK: - LoginViewModel
 
 final class LoginViewModel {
-    private var subscriptions = set<AnyCancellable>()
+    private var subscriptions = Set <AnyCancellable>()
     @Published private var email: String = ""
     @Published private var password: String = ""
     @Published private var isLoadingState: Bool = false
@@ -37,16 +36,21 @@ extension LoginViewModel: LoginViewModelInput {
 // MARK: - Output
 
 extension LoginViewModel: LoginViewModelOutput {
+
+    
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }
     
-    var isShowingErrorMessagePublisher: AnyPublisher<String, Never> {
+    var isShowErrorMessagePublisher: AnyPublisher< String, Never> {
         $isShowingErrorMessage.eraseToAnyPublisher()
+        
     }
+
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
         $isLoginEnabeld.eraseToAnyPublisher()
     }
+    
      var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }

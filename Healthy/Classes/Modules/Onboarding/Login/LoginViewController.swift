@@ -1,4 +1,5 @@
 import UIKit
+import GoogleSignIn
 import Combine
 final class LoginViewController: UIViewController {
 
@@ -77,9 +78,6 @@ private extension LoginViewController {
     
     
     func bindLoadingIndicator() {
-        viewModel.onLoadingIndicator { _ in
-            
-        }
         viewModel.isLoginStatusPublisher.sink { [weak self] isLoggedIn in
             guard let _ = self else { return }
             
@@ -89,25 +87,17 @@ private extension LoginViewController {
     
     
     func bindErrorMessage() {
-        viewModel.onErrorMessage { [weak self] message in
-            
-        }
-        viewModel.isShowingErrorMessagePublisher.sink { [weak self] message in
-            guard let _ = self else { return }
-            
-            
-            
-        }
-        .store(in: &subscriptions)
+        viewModel.isShowErrorMessagePublisher
+            .sink { [weak self] message in
+                guard let _ = self else { return }
+                
+            }
+            .store(in: &subscriptions)
     }
     
     
     func bindButtonState() {
-        viewModel.onButtonEnabled { [weak self] isEnabled in
-            guard let self else {return}
-            self.signInButton.isEnabled = isEnabled
-            
-        }
+ 
         viewModel.isLoginEnabledPublisher.assign(to: \.isEnabled , on: signInButton)
             .store(in: &subscriptions)
     }

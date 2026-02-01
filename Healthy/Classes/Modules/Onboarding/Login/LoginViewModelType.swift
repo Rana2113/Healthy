@@ -18,8 +18,8 @@ protocol LoginViewModelInput {
 /// LoginViewModelType ViewModel Output
 ///
 protocol LoginViewModelOutput {
-    var isLoadingIndicatorPublisher : AnyPublisher<Bool, Never> { get }
-    var errorPublisher: AnyPublisher<Error, Never> { get }
+    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> { get }
+    var isShowErrorMessagePublisher: AnyPublisher<String, Never> { get }
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> { get }
     var isLoginStatusPublisher: AnyPublisher<Bool, Never> { get }
 }
