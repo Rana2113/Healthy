@@ -11,6 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="emailTextField" destination="ddJ-fe-cPs" id="48j-F6-Ro9"/>
+                <outlet property="emailTextFieldLabel" destination="L7r-2e-hyw" id="hGt-kU-Xbe"/>
+                <outlet property="forgetPasswordButton" destination="07v-rs-Idr" id="NOw-h1-ei0"/>
+                <outlet property="passwordTextField" destination="392-SV-jjS" id="H3F-ru-OH4"/>
+                <outlet property="passwordTextFieldlabel" destination="07i-yT-TQ3" id="gJW-hx-se2"/>
+                <outlet property="signInButton" destination="07v-rs-Idr" id="GC6-rK-bR2"/>
+                <outlet property="signInWithFacebook" destination="sLg-UM-qT8" id="R9K-8U-PYc"/>
+                <outlet property="signInWithGoogle" destination="rdB-B1-xRZ" id="FQp-Pp-Vll"/>
+                <outlet property="signUpWithButton" destination="X0t-Lo-Oyv" id="3b3-UK-nBu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -121,7 +130,7 @@
                                                 <constraint firstAttribute="width" secondItem="rdB-B1-xRZ" secondAttribute="height" multiplier="1:1" id="s8y-Fb-7Mz"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="icon-facebook"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="google.png"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLg-UM-qT8" userLabel="Facebook Button">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
@@ -130,7 +139,7 @@
                                                 <constraint firstAttribute="width" secondItem="sLg-UM-qT8" secondAttribute="height" multiplier="1:1" id="R0e-Rf-CK6"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="icon-google"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="icon-facebook"/>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -201,8 +210,8 @@
         </view>
     </objects>
     <resources>
+        <image name="google.png" width="18" height="18"/>
         <image name="icon-facebook" width="36" height="36"/>
-        <image name="icon-google" width="36" height="36"/>
         <namedColor name="gray 4">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

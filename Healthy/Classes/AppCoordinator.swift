@@ -58,6 +58,7 @@ private extension AppCoordinator {
 // MARK: Window Replacement
 
 private extension AppCoordinator {
+
     func replaceRootViewController(_ viewController: UIViewController) {
         window.rootViewController = viewController
         window.makeKeyAndVisible()

@@ -11,6 +11,7 @@
 		63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 63831BA92ECCE19F003953DF /* NewRelic */; };
 		63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E032ECF5ACF0032062D /* GoogleSignIn */; };
 		63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63890E052ECF5ACF0032062D /* GoogleSignInSwift */; };
+		7191804F2F2ABBDA00ECBD7C /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7191804E2F2ABBDA00ECBD7C /* Factory */; };
 		71DBB7A02EA57F6A004BA0F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 				63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */,
 				63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */,
 				63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */,
+				7191804F2F2ABBDA00ECBD7C /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7191804D2F2ABBDA00ECBD7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71DFD2382EA0160D00F1B53A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +120,7 @@
 				71DBB79F2EA57F57004BA0F0 /* .swiftlint.yml */,
 				71DFD2432EA0160D00F1B53A /* Healthy */,
 				71DFD25A2EA0161000F1B53A /* HealthyTests */,
+				7191804D2F2ABBDA00ECBD7C /* Frameworks */,
 				71DFD2422EA0160D00F1B53A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +161,7 @@
 				63831BA92ECCE19F003953DF /* NewRelic */,
 				63890E032ECF5ACF0032062D /* GoogleSignIn */,
 				63890E052ECF5ACF0032062D /* GoogleSignInSwift */,
+				7191804E2F2ABBDA00ECBD7C /* Factory */,
 			);
 			productName = Healthy;
 			productReference = 71DFD2412EA0160D00F1B53A /* Healthy.app */;
@@ -705,6 +716,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		7191804E2F2ABBDA00ECBD7C /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
