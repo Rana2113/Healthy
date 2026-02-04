@@ -1,4 +1,5 @@
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -13,11 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
-        self.window = UIWindow(windowScene: windowScene)
-        let viewModel = CreateAccountViewModel()
-        let startVC = CreateAccountViewController(viewModel: viewModel)
-        self.window?.rootViewController = startVC
-        self.window?.makeKeyAndVisible()
+        
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+
+        let appCoordinator = AppCoordinator(window: window)
+        self.appCoordinator = appCoordinator
+
+        appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

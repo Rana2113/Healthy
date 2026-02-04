@@ -4,7 +4,7 @@ import UIKit
 class CheckboxButton: UIButton {
     var isChecked: Bool = false {
         didSet {
-            let image = isChecked ? Images.iconCheckboxSelected.image : Images.iconCheckboxNotSelected.image
+            let image = isChecked ? UIImage.iconCheckboxSelected : UIImage.iconCheckboxNotSelected
             self.setImage(image, for: UIControl.State.normal)
         }
     }

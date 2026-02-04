@@ -12,6 +12,7 @@ final class Logger {
         ]
     }()
 
+
     static func logDebug(_ message: String,
                          file: StaticString = #fileID,
                          function: StaticString = #function,

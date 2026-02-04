@@ -23,10 +23,9 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Images {
+  internal static let screenshot20251022At60059PM = ImageAsset(name: "Screenshot 2025-10-22 at 6.00.59 PM")
   internal static let backgroundSplash = ImageAsset(name: "background-splash")
   internal static let iconSplash = ImageAsset(name: "icon-splash")
-  internal static let iconCheckboxNotSelected = ImageAsset(name: "icon_checkbox_not_selected")
-  internal static let iconCheckboxSelected = ImageAsset(name: "icon_checkbox_selected")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

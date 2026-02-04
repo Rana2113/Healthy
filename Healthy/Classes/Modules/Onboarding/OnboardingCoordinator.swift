@@ -1,7 +1,6 @@
 import Foundation
 import UIKit
-
-protocol OnboardingCoordinator: AnyObject {
+protocol OnboardingCoordinator : AnyObject{
     func didStartCooking()
     func didFinishAuthentication()
 }
@@ -21,6 +20,7 @@ final class DefaultOnboardingCoordinator: Coordinator {
     }
 }
 
+    
 extension DefaultOnboardingCoordinator: OnboardingCoordinator {
     func didStartCooking() {
         // TODO: Navigate to the login screen

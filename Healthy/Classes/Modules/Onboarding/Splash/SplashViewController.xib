@@ -1,22 +1,100 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="headerCaptionLabel" destination="3wX-Uk-c92" id="6JC-eh-OhI"/>
+                <outlet property="headerTitleLabel" destination="3fs-LH-MQh" id="XyV-ht-GfY"/>
+                <outlet property="logoCaptionLabel" destination="nFH-Fe-KcO" id="OGd-GB-h7Z"/>
+                <outlet property="startCookingButton" destination="RqC-g0-iZE" id="5Uw-lD-De5"/>
+                <outlet property="view" destination="kXM-uo-Wnf" id="dhc-XB-W0T"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kXM-uo-Wnf">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="background-splash" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-io-Qjt">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="928"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-splash" translatesAutoresizingMaskIntoConstraints="NO" id="jNl-FI-zCj">
+                    <rect key="frame" x="157" y="222" width="79" height="79"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="79" id="QiJ-5l-mXy"/>
+                        <constraint firstAttribute="width" constant="79" id="dzd-Vf-snG"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100K+ Premium Recipe " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFH-Fe-KcO" userLabel="100K+ Premium Recipe">
+                    <rect key="frame" x="12" y="315" width="369" height="20.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Cooking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-LH-MQh">
+                    <rect key="frame" x="81" y="577.33333333333337" width="231" height="20.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple way to find Tasty Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wX-Uk-c92">
+                    <rect key="frame" x="50" y="617.66666666666663" width="293" height="20.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqC-g0-iZE">
+                    <rect key="frame" x="66" y="702" width="261" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="T2i-y7-qYA"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Start Cooking"/>
+                    <connections>
+                        <action selector="didTapStartCooking:" destination="-1" eventType="touchUpInside" id="66B-oG-pEe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ZIz-Ga-WYb"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RqC-g0-iZE" firstAttribute="leading" secondItem="ZIz-Ga-WYb" secondAttribute="leading" constant="66" id="A0l-7i-U0O"/>
+                <constraint firstAttribute="bottom" secondItem="RqC-g0-iZE" secondAttribute="bottom" constant="96" id="DUB-Fj-LaT"/>
+                <constraint firstItem="bWH-io-Qjt" firstAttribute="leading" secondItem="ZIz-Ga-WYb" secondAttribute="leading" id="Ews-nz-dVg"/>
+                <constraint firstItem="ZIz-Ga-WYb" firstAttribute="trailing" secondItem="3fs-LH-MQh" secondAttribute="trailing" constant="81" id="HXi-FM-4po"/>
+                <constraint firstItem="bWH-io-Qjt" firstAttribute="width" secondItem="kXM-uo-Wnf" secondAttribute="width" id="IoN-f1-gJq"/>
+                <constraint firstItem="RqC-g0-iZE" firstAttribute="top" secondItem="3wX-Uk-c92" secondAttribute="bottom" constant="64" id="LLU-cX-Ujx"/>
+                <constraint firstItem="3fs-LH-MQh" firstAttribute="leading" secondItem="ZIz-Ga-WYb" secondAttribute="leading" constant="81" id="UlL-Vx-T31"/>
+                <constraint firstItem="3wX-Uk-c92" firstAttribute="top" secondItem="3fs-LH-MQh" secondAttribute="bottom" constant="20" id="YAd-GD-fHf"/>
+                <constraint firstItem="ZIz-Ga-WYb" firstAttribute="trailing" secondItem="bWH-io-Qjt" secondAttribute="trailing" id="YFe-nJ-jNt"/>
+                <constraint firstAttribute="bottom" secondItem="bWH-io-Qjt" secondAttribute="bottomMargin" id="aSP-up-sEs"/>
+                <constraint firstItem="ZIz-Ga-WYb" firstAttribute="trailing" secondItem="RqC-g0-iZE" secondAttribute="trailing" constant="66" id="b0s-Rf-3QG"/>
+                <constraint firstItem="bWH-io-Qjt" firstAttribute="top" secondItem="kXM-uo-Wnf" secondAttribute="top" id="cvc-5I-30m"/>
+                <constraint firstItem="nFH-Fe-KcO" firstAttribute="centerX" secondItem="jNl-FI-zCj" secondAttribute="centerX" id="dop-mf-0k7"/>
+                <constraint firstItem="nFH-Fe-KcO" firstAttribute="leading" secondItem="ZIz-Ga-WYb" secondAttribute="leading" constant="12" id="pF3-WE-UNt"/>
+                <constraint firstItem="jNl-FI-zCj" firstAttribute="top" secondItem="ZIz-Ga-WYb" secondAttribute="top" constant="104" id="qCR-Gh-FaX"/>
+                <constraint firstItem="ZIz-Ga-WYb" firstAttribute="trailing" secondItem="3wX-Uk-c92" secondAttribute="trailing" constant="50" id="qSL-mJ-ZXf"/>
+                <constraint firstItem="3wX-Uk-c92" firstAttribute="leading" secondItem="ZIz-Ga-WYb" secondAttribute="leading" constant="50" id="sDw-5w-rXC"/>
+                <constraint firstItem="nFH-Fe-KcO" firstAttribute="top" secondItem="jNl-FI-zCj" secondAttribute="bottom" constant="14" id="uch-gd-9Y6"/>
+                <constraint firstItem="jNl-FI-zCj" firstAttribute="centerX" secondItem="ZIz-Ga-WYb" secondAttribute="centerX" id="wnh-AW-aDH"/>
+                <constraint firstItem="ZIz-Ga-WYb" firstAttribute="trailing" secondItem="nFH-Fe-KcO" secondAttribute="trailing" constant="12" id="yKz-X7-5HY"/>
+            </constraints>
+            <point key="canvasLocation" x="23.664122137404579" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <image name="background-splash" width="375" height="812"/>
+        <image name="icon-splash" width="79" height="79"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
