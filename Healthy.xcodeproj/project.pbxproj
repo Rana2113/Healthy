@@ -82,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				63890E062ECF5ACF0032062D /* GoogleSignInSwift in Frameworks */,
 				63831BAA2ECCE19F003953DF /* NewRelic in Frameworks */,
 				63890E042ECF5ACF0032062D /* GoogleSignIn in Frameworks */,
@@ -159,7 +158,6 @@
 			);
 			name = Healthy;
 			packageProductDependencies = (
-
 				63831BA92ECCE19F003953DF /* NewRelic */,
 				63890E032ECF5ACF0032062D /* GoogleSignIn */,
 				63890E052ECF5ACF0032062D /* GoogleSignInSwift */,
@@ -246,7 +244,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				220898972EA91E7F0072338D /* XCRemoteSwiftPackageReference "Factory" */,
-
 				63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
 				63890E022ECF5ACF0032062D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
@@ -686,13 +683,11 @@
 				minimumVersion = 2.5.3;
 			};
 		};
-
 		63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
 			requirement = {
 				kind = upToNextMajorVersion;
-
 				minimumVersion = 7.6.0;
 			};
 		};
@@ -707,7 +702,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-
 		63831BA92ECCE19F003953DF /* NewRelic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63831BA82ECCE19F003953DF /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
