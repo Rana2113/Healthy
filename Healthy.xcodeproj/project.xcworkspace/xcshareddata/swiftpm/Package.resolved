@@ -1,4 +1,5 @@
 {
+
   "originHash" : "c909b81d2090c212bd47a8004299d98e3898680199019fb2a8f1645c755e3cac",
   "pins" : [
     {
@@ -29,6 +30,7 @@
       }
     },
     {
+
       "identity" : "googlesignin-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleSignIn-iOS",
@@ -65,10 +67,12 @@
       }
     },
     {
+>>>>>>> develop
       "identity" : "newrelic-ios-agent-spm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/newrelic/newrelic-ios-agent-spm",
       "state" : {
+
         "revision" : "2cb48cab703bc4d00edde3ccb0ce891250b1bb17",
         "version" : "7.6.0"
       }

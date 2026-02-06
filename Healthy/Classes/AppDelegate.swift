@@ -1,5 +1,4 @@
 import UIKit
-import NewRelic
 import GoogleSignIn
 import NewRelic
 

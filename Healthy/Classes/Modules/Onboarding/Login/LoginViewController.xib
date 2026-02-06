@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -96,6 +96,9 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Forget Password?">
                                         <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapForgetPassword:" destination="-1" eventType="touchUpInside" id="uDW-HG-NXJ"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-AF-qzk" userLabel="Sign In Stack View">
                                     <rect key="frame" x="0.0" y="479.66666666666669" width="333" height="81.333333333333314"/>
@@ -111,6 +114,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Sign In">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="09k-rQ-oyx"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____ Or Sign In with ____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-qL-5Wg">
                                             <rect key="frame" x="0.0" y="59.99999999999995" width="333" height="21.333333333333336"/>
@@ -123,7 +129,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-ql-0S3" userLabel="Sign In Options Stack View">
                                     <rect key="frame" x="110" y="581" width="113" height="44"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-B1-xRZ" userLabel="Google Button" customClass="GIDSignInButton">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-B1-xRZ" userLabel="Google Button">
                                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="rY3-0X-pSt"/>
@@ -131,6 +137,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="google.png"/>
+                                            <connections>
+                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="PuP-Q1-zoq"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLg-UM-qT8" userLabel="Facebook Button">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
@@ -140,6 +149,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="icon-facebook"/>
+                                            <connections>
+                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="CYl-vi-Ozv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -157,6 +169,9 @@
                                             <color key="tintColor" name="secondary 100"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                            <connections>
+                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="orh-vJ-uZ9"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
