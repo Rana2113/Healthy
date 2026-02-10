@@ -61,8 +61,8 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapSignInWithFacebook(_ sender: Any) {
-        
-        viewModel.performSocialMediaSignIn()
+        let authenticator = GoogleSignInAuthenticator(viewController: self)
+        viewModel.performSocialMediaSignIn(authenticator)
     }
     
 }
@@ -117,8 +117,8 @@ private extension LoginViewController {
         .store(in: &subscriptions)
     }
     func bindErrorMessage() {
-        viewModel.isShowErrorMessagePublisher
-            .sink { [weak self] message in
+        viewModel.errorPublisher
+            .sink { [weak self] error in
                 guard let _ = self else { return }
             }
             .store(in: &subscriptions)
