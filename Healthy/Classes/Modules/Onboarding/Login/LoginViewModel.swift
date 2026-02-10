@@ -8,7 +8,7 @@ final class LoginViewModel {
     @Published private var email: String = ""
     @Published private var password: String = ""
     @Published private var isLoadingState: Bool = false
-    @Published private var isShowingErrorMessage: String = ""
+    @Published private var isShowingErrorMessage = PassthroughSubject<Error, Never>()
     @Published private var isLoginEnabeld: Bool = false
     @Published private var isLoginStatus: Bool = false
 }
@@ -36,15 +36,13 @@ extension LoginViewModel: LoginViewModelInput {
 // MARK: - Output
 
 extension LoginViewModel: LoginViewModelOutput {
-
     
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }
     
-    var isShowErrorMessagePublisher: AnyPublisher< String, Never> {
-        $isShowingErrorMessage.eraseToAnyPublisher()
-        
+    var errorPublisher: AnyPublisher<any Error, Never> {
+        isShowingErrorMessage.eraseToAnyPublisher()
     }
 
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
