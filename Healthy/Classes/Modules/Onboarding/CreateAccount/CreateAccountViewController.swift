@@ -8,7 +8,6 @@ final class CreateAccountViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var checkBoxButton: CheckboxButton!
     @IBOutlet weak var signUpButton: UIButton!
-
     // MARK: - Properties
 
     private let viewModel: CreateAccountViewModelType
@@ -57,6 +56,10 @@ private extension CreateAccountViewController {
         }
     }
     @objc private func didTapSignUp(_ sender: Any) {
+    }
+
+    @IBAction func didTapSignIn(_ sender: UIButton) {
+        viewModel.didTapSignIn()
     }
 }
 

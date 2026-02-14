@@ -12,6 +12,7 @@ protocol CreateAccountViewModelInput {
     func updatePassword(_ text: String)
     func updateConfirmPassword(_ text: String)
     func updateAcceptTermsAndConditions(_ isChecked: Bool)
+    func didTapSignIn()
 }
 
 /// CreateAccountViewModelType ViewModel Output
