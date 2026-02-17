@@ -5,12 +5,17 @@ import Combine
 
 final class LoginViewModel {
     private var subscriptions = Set <AnyCancellable>()
+    private unowned let coordinator: OnboardingCoordinator
     @Published private var email: String = ""
     @Published private var password: String = ""
     @Published private var isLoadingState: Bool = false
     @Published private var isShowingErrorMessage = PassthroughSubject<Error, Never>()
     @Published private var isLoginEnabeld: Bool = false
     @Published private var isLoginStatus: Bool = false
+
+    init(coordinator: OnboardingCoordinator) {
+        self.coordinator = coordinator
+    }
 }
 
 // MARK: - Input
@@ -19,15 +24,17 @@ extension LoginViewModel: LoginViewModelInput {
     func updateEmail(_ text: String) {
         email = text
     }
-    
+
     func updatePassword(_ text: String) {
         password = text
     }
-    
+
     func performSignIn() {}
-    
-    func performSignUp() {}
-    
+
+    func performSignUp() {
+        coordinator.didTapSignUp()
+    }
+
     func performForgetPassword() {}
     
     func performSocialMediaSignIn(_ authentication: any Authentication) {}
@@ -36,11 +43,10 @@ extension LoginViewModel: LoginViewModelInput {
 // MARK: - Output
 
 extension LoginViewModel: LoginViewModelOutput {
-    
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }
-    
+
     var errorPublisher: AnyPublisher<any Error, Never> {
         isShowingErrorMessage.eraseToAnyPublisher()
     }
@@ -48,7 +54,7 @@ extension LoginViewModel: LoginViewModelOutput {
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
         $isLoginEnabeld.eraseToAnyPublisher()
     }
-    
+
      var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }

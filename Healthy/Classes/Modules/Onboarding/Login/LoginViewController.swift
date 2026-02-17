@@ -36,35 +36,32 @@ final class LoginViewController: UIViewController {
         configureViewModelInputs()
         configureViewModelOutputs()
     }
-    
+
     // MARK: - Actions
-    
+
     @IBAction func didTapSignIn(_ sender: Any) {
         viewModel.performSignIn()
     }
-  
-    
+
+
     @IBAction func didTapSignUp(_ sender: Any) {
         viewModel.performSignUp()
     }
-    
-    
+
     @IBAction func didTapForgetPassword(_ sender: Any) {
         viewModel.performForgetPassword()
     }
-    
-    
-    
+
     @IBAction func didTapSignInWithGoogle(_ sender: Any) {
         let authenticator = GoogleSignInAuthenticator(viewController: self)
         viewModel.performSocialMediaSignIn(authenticator)
     }
-    
+
     @IBAction func didTapSignInWithFacebook(_ sender: Any) {
         let authenticator = GoogleSignInAuthenticator(viewController: self)
         viewModel.performSocialMediaSignIn(authenticator)
     }
-    
+
 }
 
 // MARK: - Configurations
@@ -133,7 +130,6 @@ private extension LoginViewController {
         }
         .store(in: &subscriptions)
     }
-
 }
 
 // MARK: - Private Handlers

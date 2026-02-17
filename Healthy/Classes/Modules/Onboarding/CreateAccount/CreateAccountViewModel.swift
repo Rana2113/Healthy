@@ -3,12 +3,17 @@ import Foundation
 // MARK: - CreateAccountViewModel
 
 final class CreateAccountViewModel {
+    private unowned let coordinator: OnboardingCoordinator
     private var username: String = ""
     private var email: String = ""
     private var password: String = ""
     private var confirmPassword: String = ""
     private var isChecked: Bool = false
     private var onButtonEnabled: (Bool) -> Void = { _ in }
+
+    init(coordinator: OnboardingCoordinator) {
+        self.coordinator = coordinator
+    }
  }
 
 // MARK: - Input
@@ -33,6 +38,9 @@ extension CreateAccountViewModel: CreateAccountViewModelInput {
     func updateAcceptTermsAndConditions(_ isChecked: Bool) {
         self.isChecked = isChecked
         updateEnableStateButton()
+    }
+    func didTapSignIn(){
+        coordinator.didTapSignIn()
     }
 }
 
